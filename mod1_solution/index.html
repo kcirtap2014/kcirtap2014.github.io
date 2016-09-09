@@ -7,9 +7,11 @@
     <style>
       .message { font-size: 1.3em; font-weight: bold; }
     </style>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <script src="angular.min.js"></script>
   <script src="app.js"></script>
+  
 <body ng-app="LunchCheck">
    <div ng-controller="LunchCheckController" class="container">
 
@@ -23,7 +25,7 @@
          <div class="form-group">
              <button ng-click="checkIt()" class="btn btn-default">Check If Too Much</button>
          </div>
-         <div class="form-group message" >
+         <div class="form-group message" ng-class="customStyle.colorClass">
             {{message}}
            <!-- Your message can go here. -->
          </div>
