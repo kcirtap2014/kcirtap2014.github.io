@@ -46,13 +46,13 @@ function NarrowItDownController( MenuSearchService){
 MenuSearchService.$inject = ['$http', '$filter']
 function MenuSearchService($http, $filter){
 	var service = this;
-	var FoundItems = [];
 	service.getMatchedMenuItems = function (searchTerm){
 		
 		return $http({
 			method: "GET",
 			url:("https://davids-restaurant.herokuapp.com/menu_items.json"),
 		}).then(function(response){
+			var FoundItems = [];
 			var data = response.data;
 			var items = data.menu_items;
 			if (searchTerm!=""){
