@@ -21,9 +21,9 @@ input[type="text"] {
 }
 
 br {
-  float: left;
-  line-height:50px;
   margin: 2em;
+  line-height:50px;
+
 }
 
 .loader {
