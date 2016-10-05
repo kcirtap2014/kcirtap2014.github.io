@@ -23,6 +23,7 @@ input[type="text"] {
 br {
   float: left;
   line-height:50px;
+  margin: 2em;
 }
 
 .loader {
