@@ -22,7 +22,8 @@ input[type="text"] {
 
 br {
   margin: 4em ;/* FF for instance */
-  line-height:4px;
+  display: block;
+  /*line-height:4px;*/
 }
 
 .loader {
