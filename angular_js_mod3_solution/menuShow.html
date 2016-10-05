@@ -2,7 +2,7 @@
 	<li ng-repeat="item in list.items">
     	({{ item.short_name }}) {{ item.name }}
     	<!--pay attention to the index, using {index:$index} always deletes the
-    	first element-->
+    	first-->
     	<button ng-click="list.onRemove($index);">Don't want this one!</button>
     	<p><span class="bold">Description: </span> {{item.description}}</p>
 	</li>
