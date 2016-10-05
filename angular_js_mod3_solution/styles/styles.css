@@ -21,7 +21,7 @@ input[type="text"] {
 }
 
 br {
-  margin:1.5em ;/* FF for instance */
+  margin:4em ;/* FF for instance */
 }
 
 .loader {
