@@ -22,7 +22,7 @@ input[type="text"] {
 
 br {
   margin: 4em ;/* FF for instance */
-  display: block;
+  display: inline-block;
   /*line-height:4px;*/
 }
 
