@@ -21,9 +21,8 @@ input[type="text"] {
 }
 
 br {
-  margin: 10em ;/* FF for instance */
-  display: inline-block;
-  /*line-height:4px;*/
+  float: left;
+  line-height:50px;
 }
 
 .loader {
