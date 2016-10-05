@@ -3,7 +3,7 @@
     	({{ item.short_name }}) {{ item.name }}
     	<!--pay attention to the index, using {index:$index} always deletes the
     	first-->
-    	<button ng-click="list.onRemove($index);">Don't want this one!</button>
+    	<button ng-click="list.onRemove({index:$index});">Don't want this one!</button>
     	<p><span class="bold">Description: </span> {{item.description}}</p>
 	</li>
 </ol>
