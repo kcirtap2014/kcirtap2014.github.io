@@ -24,9 +24,7 @@ function FoundItemsDirective(){
 function FoundItemsDirectiveController(){
 	var list = this;
 
-	list.onRemove= function(index){
-		list.items.splice(index,1);
-	};
+	
 }
 
 NarrowItDownController.$inject = [ 'MenuSearchService'];
@@ -41,6 +39,9 @@ function NarrowItDownController( MenuSearchService){
   			menu.found = result;
   		})
   	};
+  	menu.removeItem= function(index){
+		menu.found.splice(index,1);
+	};
 }
 	
 MenuSearchService.$inject = ['$http', '$filter']
