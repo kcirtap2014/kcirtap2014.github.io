@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Assignment 4 module solution</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+    
+    
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+  </head>
+  <body ng-app='MenuApp'>
+    <h1>Menu App</h1>
+    <ui-view></ui-view>
+    <!-- Libraries -->
+
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+
+    <!-- Modules -->
+    <script src="src/menuapp.module.js"></script>
+    <script src="src/data.module.js"></script>
+    
+    <!-- Routes -->
+    <script src="src/routes.js"></script>
+    
+    <!-- 'ShoppingList' module artifacts -->
+    <script src="src/menudata.service.js"></script>
+    <script src="src/main-categories.controller.js"></script>
+    <script src="src/categories.component.js"></script>
+    <script src="src/item-detail.controller.js"></script>
+    <script src="src/itemdetail.component.js"></script>
+    
+  </body>
+</html>
