@@ -13,7 +13,9 @@
       return $http({
         method: "GET",
         url:(APIBasePath + "/categories.json")
-      })
+      }).then(function(result) {
+      return result.data;
+    });
     }
     
     menu.getItemsForCategory = function (categoryShortName){
@@ -23,7 +25,9 @@
         params:{
           category: categoryShortName
         } 
-      })
+      }).then(function(result) {
+      return result.data.menu_items;
+    });
     };
   }
 })();

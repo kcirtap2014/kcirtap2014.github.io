@@ -9,8 +9,8 @@ ItemDetailController.$inject = ['MenuDataService','items'];
 
 function ItemDetailController(MenuDataService, items) {
   var iD = this;
-  iD.item = items.data;
-  iD.menu = iD.item.menu_items;
+  iD.items = items;
+  console.log(iD.items)
 }
 
 })();
