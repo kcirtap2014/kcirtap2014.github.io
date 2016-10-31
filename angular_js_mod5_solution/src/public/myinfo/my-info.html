@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="css/form.css">
+<div class="text-center">
+	<legend>My Information</legend>
+	<div ng-if = "infoCtrl.empty"> 
+		<button ui-sref="signup">Not Signed Up Yet. Sign up Now!</button> 
+	</div>
+	<div ng-if = "!infoCtrl.empty" class="text-center">
+		<p>First name : {{infoCtrl.info.firstname}}</p>
+		<p>Last name : {{infoCtrl.info.lastname}}</p>
+		<p>E-mail : {{infoCtrl.info.email}}</p>
+		<p>Phone : {{infoCtrl.info.phone}}</p>
+		<p>My favourite dish:</p>
+        <h3 class="menu-item-title">{{infoCtrl.menuItem.name}}</h3>
+        <img  width="250" height="150" ng-src="{{infoCtrl.basePath}}/images/{{infoCtrl.menuItem.short_name}}.jpg" alt="{{infoCtrl.menuItem.name}}">
+        <div>{{infoCtrl.menuItem.price_small | currency}}<span> {{infoCtrl.menuItem.small_portion_name}}</span> {{infoCtrl.menuItem.price_large | currency}} <span>{{infoCtrl.menuItem.large_portion_name}}</span></div>
+      	<p class="menu-item-details">{{infoCtrl.menuItem.description}}</p>
+	</div>
+</div>

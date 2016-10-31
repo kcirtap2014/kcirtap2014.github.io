@@ -1,0 +1,46 @@
+ <link rel="stylesheet" href="css/form.css">
+ <fieldset class="text-center "  >
+      <legend>Registration</legend>
+      <form name='regForm' novalidate>
+         <div ng-if="regForm.email.$invalid && regForm.email.$touched">
+            Must be a valid email address: handle@domain format
+          </div>
+          <div ng-if="regForm.phone.$invalid && regForm.phone.$touched">
+            Phone must be in the format ###-###-####.
+          </div>
+          
+          <div style="margin-top: 10px;" ng-if="regForm.$valid && signUpCtrl.menuItem != null" ->
+            Your information has been saved.
+          </div>
+        <input type="text" name="firstname" placeholder="Firstname"
+          ng-model="signUpCtrl.user.firstname">
+          <br>
+
+        <input type="text" name="lastname" placeholder="Lastname"
+          ng-model="signUpCtrl.user.lastname">
+          <br>
+
+        <input type="email" name="email" placeholder="Email"
+          ng-model="signUpCtrl.user.email"
+          required>
+          
+          <br>
+
+        <input type="text" name="phone" placeholder="Phone ###-###-####"
+          ng-model="signUpCtrl.user.phone"
+          pattern="(\d{3})-(\d{3})-(\d{4})">
+          
+          <br>
+
+         <input type="text" name="short_name" placeholder="Favorite menu number"
+          ng-model="signUpCtrl.user.menu_number" ng-keyup="signUpCtrl.getItems()">
+          <br>
+          <div ng-if="signUpCtrl.menuList.length==0">
+            No such menu number exists
+          </div>
+
+        <button
+          ng-disabled="regForm.$invalid"
+          ng-click="signUpCtrl.submit();">Submit</button>
+      </form>
+    </fieldset>
