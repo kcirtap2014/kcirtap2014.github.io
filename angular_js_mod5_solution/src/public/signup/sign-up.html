@@ -8,8 +8,9 @@
           <div ng-if="regForm.phone.$invalid && regForm.phone.$touched">
             Phone must be in the format ###-###-####.
           </div>
-          
+          {{signUpCtrl.clicked}}
           <div style="margin-top: 10px;" ng-if="regForm.$valid && signUpCtrl.clicked" ->
+            
             Your information has been saved.
           </div>
         <input type="text" name="firstname" placeholder="Firstname"

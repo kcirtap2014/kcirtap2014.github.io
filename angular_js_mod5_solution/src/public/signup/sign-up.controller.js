@@ -10,8 +10,8 @@ function SignUpController(SignUpService) {
   	var signUpCtrl = this;	
     signUpCtrl.clicked = false
    	signUpCtrl.submit = function(){
-          signUpCtrl.clicked = true
-   		 if (signUpCtrl.menuItem != null){
+      signUpCtrl.clicked = true
+   		if (signUpCtrl.menuItem != null){
    				SignUpService.save(signUpCtrl.user.firstname,
    					signUpCtrl.user.lastname,
    					signUpCtrl.user.email,
