@@ -33,14 +33,14 @@
           <br>
 
          <input type="text" name="short_name" placeholder="Favorite menu number"
-          ng-model="signUpCtrl.user.menu_number">
+          ng-model="signUpCtrl.user.menu_number" ng-keyup="signUpCtrl.fetchData();">
           <br>
           <div ng-if="signUpCtrl.menuItem==null && regForm.short_name.$touched">
             No such menu number exists
           </div>
 
         <button
-          ng-disabled="regForm.$invalid"
+          ng-disabled="regForm.$invalid || signUpCtrl.noItem"
           ng-click="signUpCtrl.submit();">Submit</button>
       </form>
     </fieldset>

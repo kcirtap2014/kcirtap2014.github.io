@@ -16,9 +16,6 @@ function ToBuyShoppingController(ShoppingListCheckOffService){
 		ShoppingListCheckOffService.remove_item(itemIndex);
 	}
 
-	tobuy.allBought = function(){
-		ShoppingListCheckOffService.allBought(tobuy.items);
-	}
 }
 
 AlreadyBoughtShoppingController.$inject=['ShoppingListCheckOffService']
@@ -29,9 +26,7 @@ function AlreadyBoughtShoppingController(ShoppingListCheckOffService){
 	alreadybought.add_item = function(){
 		ShoppingListCheckOffService.add_item(alreadybought.item_name, alreadybought.item_quantity);
 	}
-	alreadybought.nothingBought = function(){
-		ShoppingListCheckOffService.nothingBought();
-	}
+
 }
 
 function ShoppingListCheckOffService(){

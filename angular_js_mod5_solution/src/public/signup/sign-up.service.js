@@ -11,12 +11,12 @@
 		var info;
 
 		signup.getItems = function (ShortName){
+		
 			return $http({
 				method: "GET",
 				url:(ApiPath+ "/menu_items/"+ ShortName+".json"),
 			}).then(function(result){
 				return result.data;
-				
 			});
 		
 		};
