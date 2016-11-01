@@ -8,7 +8,7 @@ SignUpController.$inject = ['SignUpService'];
 
 function SignUpController(SignUpService) {
   	var signUpCtrl = this;	
-   	
+   
    	signUpCtrl.submit = function(){
    		 if (signUpCtrl.menuItem != null){
    				SignUpService.save(signUpCtrl.user.firstname,
@@ -22,8 +22,8 @@ function SignUpController(SignUpService) {
       signUpCtrl.fetchData = function(){
          var promise = SignUpService.getItems(signUpCtrl.user.menu_number);
          promise.then(function(result){
-            signUpCtrl.menuItem = result;
-            signUpCtrl.noItem = false;},
+            signUpCtrl.noItem = false;
+            signUpCtrl.menuItem = result;},
             function (result){
                if (result.status === 500){
                   signUpCtrl.noItem = true;

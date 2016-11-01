@@ -33,7 +33,8 @@
           <br>
 
          <input type="text" name="short_name" placeholder="Favorite menu number"
-          ng-model="signUpCtrl.user.menu_number" ng-keyup="signUpCtrl.fetchData();">
+          ng-model="signUpCtrl.user.menu_number" ng-keyup="signUpCtrl.fetchData();"
+          required>
           <br>
           <div ng-if="signUpCtrl.menuItem==null && regForm.short_name.$touched">
             No such menu number exists
